@@ -1,0 +1,27 @@
+.generic-empty {
+  padding: 70px 24px;
+  text-align: center;
+  color: var(--text-faint);
+}
+
+.generic-empty i {
+  font-size: 44px;
+  margin-bottom: 16px;
+  color: var(--primary-yellow);
+}
+
+.generic-empty p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.generic-empty span {
+  font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+  .generic-empty {
+    padding: 48px 16px;
+  }
+}

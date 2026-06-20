@@ -1,0 +1,144 @@
+/* ==========================================================================
+   GLOBAL THEME — Kingsleys Chicken Admin Dashboard
+   --------------------------------------------------------------------------
+   All brand colors, spacing and radii live here as CSS variables.
+   To re-skin this template for another brand, this is the ONLY file
+   you should need to touch for colors/typography.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --primary-red: #c41e3a;
+  --primary-red-dark: #8b0000;
+  --primary-yellow: #f5b041;
+  --primary-yellow-dark: #e6a017;
+
+  --sidebar-bg-top: #0f0f1a;
+  --sidebar-bg-bottom: #1a1a2e;
+
+  --bg-app: #fdf8f0;
+  --bg-card: #ffffff;
+  --bg-soft-red: #fff5f5;
+  --bg-soft-yellow: #fff8e7;
+
+  --text-heading: #1a1a2e;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-faint: #94a3b8;
+  --text-on-dark: #cbd5e1;
+  --text-on-dark-muted: #a0aec0;
+
+  --border-soft: rgba(245, 176, 65, 0.2);
+  --border-softer: rgba(245, 176, 65, 0.15);
+
+  --success-bg: #dcfce7;
+  --success-text: #166534;
+  --pending-bg: #fef9c3;
+  --pending-text: #854d0e;
+  --preparing-bg: #ffe4b5;
+  --preparing-text: #c41e3a;
+  --danger: #dc2626;
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --sidebar-width-collapsed: 84px;
+  --topbar-height: 72px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', 'Inter', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-red: 0 12px 25px rgba(196, 30, 58, 0.12);
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-app);
+  color: var(--text-heading);
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--primary-red);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(196, 30, 58, 0.35);
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

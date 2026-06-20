@@ -1,0 +1,51 @@
+.chart-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid var(--border-softer);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  min-width: 0;
+}
+
+.chart-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.chart-header h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.chart-header select {
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.7rem;
+  background: white;
+  color: var(--text-body);
+}
+
+.chart-canvas-wrap {
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .chart-card {
+    padding: 16px;
+  }
+  .chart-canvas-wrap {
+    height: 210px;
+  }
+}
