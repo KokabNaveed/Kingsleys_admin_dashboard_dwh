@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'
 import PublicOnlyRoute from './components/PublicOnlyRoute'
 import DashboardLayout from './layouts/DashboardLayout'
@@ -11,6 +11,16 @@ import NotFound from './pages/NotFound'
 import { flatPages } from './data/navConfig'
 
 export default function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-L22EE6454J', {
+        page_path: location.pathname + location.search,
+      })
+    }
+  }, [location.pathname, location.search])
+
   // Every nav entry except the dashboard itself ("/") renders as a
   // GenericPage placeholder automatically — add real UI for a section
   // simply by swapping its <Route element> for a custom page component.
