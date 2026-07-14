@@ -17,7 +17,7 @@ export const navSections = [
         label: 'Dashboard',
         icon: 'fa-tachometer-alt',
         path: '/',
-        description: "Welcome back! Here's what's happening with your stores."
+        description: "Welcome back to your store."
       },
       {
         label: 'Orders',
